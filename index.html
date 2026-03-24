@@ -697,15 +697,15 @@
   <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mzdjnoyr" method="POST">
     <div class="form-field">
       <label>Ton nom</label>
-      <input type="text" placeholder="Marie Dupont" required>
+      <input type="text" name="name" placeholder="Marie Dupont" required>
     </div>
     <div class="form-field">
       <label>Email</label>
-      <input type="email" placeholder="marie@startup.io" required>
+      <input type="email" name="email" placeholder="marie@startup.io" required>
     </div>
     <div class="form-field">
       <label>Type de projet</label>
-      <select>
+      <select name="projet">
         <option value="">— Sélectionner —</option>
         <option>Application web</option>
         <option>API / Backend</option>
@@ -716,7 +716,7 @@
     </div>
     <div class="form-field">
       <label>Ton projet en quelques mots</label>
-      <textarea placeholder="Je veux construire..."></textarea>
+      <textarea name="message" placeholder="Je veux construire..."></textarea>
     </div>
     <div class="form-msg" id="formMsg"></div>
     <button type="submit" class="form-submit">Envoyer le message</button>
