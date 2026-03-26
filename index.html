@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mathieu HABIB — Développeur Fullstack Freelance Paris</title>
+<title>Mathieu HABIB — Développeur Full Stack Junior · Paris</title>
 
 <!-- SEO -->
-<meta name="description" content="Développeur Fullstack freelance basé à Paris. Je conçois des applications web, API et interfaces modernes. Disponible pour vos projets.">
-<meta name="keywords" content="développeur fullstack freelance, développeur web paris, react, node.js, next.js, api, freelance dev">
+<meta name="description" content="Développeur web full stack junior à Paris : Angular, Symfony, PHP, intégration REST. Formation DonkeySchool. Recherche d’un poste à partir de janvier 2026.">
+<meta name="keywords" content="développeur full stack junior, développeur web paris, angular, symfony, php, typescript, mysql">
 <meta name="author" content="Mathieu HABIB">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://portfolio-mathieuhabib.vercel.app">
 
 <!-- Open Graph (aperçu LinkedIn, WhatsApp...) -->
-<meta property="og:title" content="Mathieu HABIB — Développeur Fullstack Freelance">
-<meta property="og:description" content="Je construis des produits web qui marchent. Disponible pour vos projets freelance.">
+<meta property="og:title" content="Mathieu HABIB — Développeur Full Stack Junior">
+<meta property="og:description" content="Front-end et back-end : applications performantes et évolutives. Disponible à partir de janvier 2026.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://portfolio-mathieuhabib.vercel.app">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mathieu HABIB — Dev Fullstack Freelance">
-<meta name="twitter:description" content="Je construis des produits web qui marchent.">
+<meta name="twitter:title" content="Mathieu HABIB — Développeur Full Stack Junior">
+<meta name="twitter:description" content="Développeur web full stack — Paris. Recherche active à partir de janvier 2026.">
 
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -177,6 +177,7 @@
     display: flex;
     gap: 60px;
     align-items: flex-end;
+    flex-wrap: wrap;
     opacity: 0;
     animation: fadeUp 1s 0.7s forwards;
   }
@@ -341,6 +342,7 @@
     line-height: 1.8;
     margin-bottom: 32px;
   }
+  .project-desc strong { color: var(--text); font-weight: 600; }
   .project-tech {
     display: flex;
     flex-wrap: wrap;
@@ -367,6 +369,13 @@
     opacity: 1;
     transform: translateX(0);
   }
+  .project-extlink {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    transition: opacity 0.2s;
+  }
+  .project-extlink:hover { opacity: 0.85; }
 
   /* ── STACK ── */
   #stack {
@@ -433,6 +442,60 @@
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 1s ease;
+  }
+
+  /* ── PARCOURS ── */
+  #parcours {
+    padding: 120px 48px;
+    border-top: 1px solid var(--border);
+  }
+  .parcours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .parcours-block {
+    padding: 40px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .parcours-block h3 {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .parcours-block ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .parcours-block li {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .parcours-block li strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .parcours-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .parcours-tags span {
+    font-size: 10px;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    letter-spacing: 0.5px;
   }
 
   /* ── CONTACT ── */
@@ -575,7 +638,8 @@
     .projects-grid { grid-template-columns: 1fr; }
     .stack-grid { grid-template-columns: 1fr; }
     #contact { grid-template-columns: 1fr; gap: 48px; padding: 80px 24px; }
-    #projets, #stack { padding: 80px 24px; }
+    #projets, #stack, #parcours { padding: 80px 24px; }
+    .parcours-grid { grid-template-columns: 1fr; }
     footer { padding: 24px; flex-direction: column; gap: 12px; }
     .hero-scroll { display: none; }
   }
@@ -589,10 +653,11 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">DEV.FS</div>
+  <div class="nav-logo">M.HABIB</div>
   <ul class="nav-links">
-    <li><a href="#projets">Projets</a></li>
+    <li><a href="#projets">Expériences</a></li>
     <li><a href="#stack">Stack</a></li>
+    <li><a href="#parcours">Parcours</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -601,11 +666,11 @@
 <section id="hero">
   <div class="hero-grid-line"></div>
   <div class="big-number">01</div>
-  <p class="hero-eyebrow">// Développeur Fullstack · Freelance · Paris</p>
+  <p class="hero-eyebrow">// Mathieu HABIB · Développeur full stack junior · Paris</p>
   <h1 class="hero-title">
-    Je construis<br>
-    <span class="italic-line">des produits</span><br>
-    <span class="accent-word">qui marchent.</span>
+    Full stack<br>
+    <span class="italic-line">front &amp; back</span><br>
+    <span class="accent-word">qui livre.</span>
   </h1>
   <div class="hero-sub">
     <p class="hero-desc">Du backend robuste aux interfaces mémorables — je prends en charge la totalité de ta stack pour transformer tes idées en produits concrets.</p>
@@ -616,50 +681,49 @@
 
 <!-- PROJETS -->
 <section id="projets">
-  <div class="section-label">Réalisations</div>
-  <h2 class="section-title reveal">Mes<br>Projets</h2>
+  <div class="section-label">Expériences</div>
+  <h2 class="section-title reveal">Parcours<br>pro</h2>
   <div class="projects-grid">
 
     <div class="project-card reveal">
       <div class="project-num">01</div>
-      <div class="project-tag">SaaS</div>
-      <div class="project-name">INVOIFY</div>
-      <p class="project-desc">Plateforme de facturation automatisée pour indépendants. Gestion clients, devis, relances et export PDF en temps réel.</p>
+      <div class="project-tag">Stage · 6 mois · dès janv. 2026</div>
+      <div class="project-name">WOLEET</div>
+      <p class="project-desc">Projet <strong>woleet.io</strong> — développement et évolution des interfaces Angular / AngularJS d’une plateforme d’ancrage et de signature électronique. Intégration REST avec un backend Spring Boot. Participation au déploiement (Docker, GitLab CI, Kubernetes) selon les besoins de l’équipe.</p>
       <div class="project-tech">
-        <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Stripe</span>
+        <span>Angular</span><span>AngularJS</span><span>Spring Boot</span><span>Docker</span><span>GitLab CI</span><span>Kubernetes</span>
       </div>
       <div class="project-arrow">↗</div>
     </div>
 
     <div class="project-card reveal" style="transition-delay: 0.1s">
       <div class="project-num">02</div>
-      <div class="project-tag">E-commerce</div>
-      <div class="project-name">NŌWEAR</div>
-      <p class="project-desc">Boutique streetwear avec configurateur de produits en temps réel, panier persistant et gestion des stocks multi-entrepôts.</p>
+      <div class="project-tag">Stage · 2 mois · oct. 2025</div>
+      <div class="project-name">DONKEYCORP</div>
+      <p class="project-desc">Projet <strong><a href="https://www.letsligo.com" target="_blank" rel="noopener noreferrer" class="project-extlink">letsligo.com</a></strong> — SaaS fullstack permettant de scanner des cartes de visite pour générer automatiquement une fiche CRM. Intégration de l'API ChatGPT pour analyser les liens entre les contacts et proposer des actions de prospection : envoi d'emails personnalisés et mise en relation ciblée. Développement du backend Symfony et des interfaces frontend.</p>
       <div class="project-tech">
-        <span>React</span><span>Express</span><span>Redis</span><span>Shopify API</span>
+        <span>Symfony</span><span>PHP</span><span>Stimulus.js</span><span>API ChatGPT</span><span>Google SDK</span><span>HubSpot API</span><span>CRM</span>
       </div>
       <div class="project-arrow">↗</div>
     </div>
 
     <div class="project-card reveal" style="transition-delay: 0.15s">
       <div class="project-num">03</div>
-      <div class="project-tag">Dashboard</div>
-      <div class="project-name">FLŌW</div>
-      <p class="project-desc">Outil de gestion de projets en temps réel avec collaboration live, intégrations GitHub & Slack, et analytics avancés.</p>
-      <div class="project-tech">
-        <span>Vue.js</span><span>NestJS</span><span>WebSockets</span><span>MongoDB</span>
+      <div class="project-tag">Projet final DonkeySchool · 2 mois · jul. 2025</div>
+      <div class="project-name">ANDREANE</div>
+      <p class="project-desc">Projet étudiant inspiré de <strong>Doctolib</strong> — développement d'une plateforme de prise de rendez-vous en ligne pour <a href="https://www.andreane.fr" target="_blank" rel="noopener noreferrer" class="project-extlink">Andreane</a>, éditeur de logiciels. Architecture base de données <strong>multi-tenants</strong> sous Symfony, exposition des données via <strong>API Platform</strong>, et interfaces de réservation et gestion de créneaux en Angular.</p>      <div class="project-tech">
+        <span>Symfony</span><span>API Platform</span><span>Angular</span><span>MySQL multi-tenants</span><span>PHP</span><span>TypeScript</span>
       </div>
       <div class="project-arrow">↗</div>
     </div>
 
     <div class="project-card reveal" style="transition-delay: 0.2s">
       <div class="project-num">04</div>
-      <div class="project-tag">API</div>
-      <div class="project-name">SŌNIX</div>
-      <p class="project-desc">API REST haute performance pour streaming audio. 40M+ requêtes/mois, latence < 50ms, déployée sur 3 régions AWS.</p>
+      <div class="project-tag">Site vitrine · mars 2025</div>
+      <div class="project-name">EXPERT-SUBVENTIONS</div>
+      <p class="project-desc">Développement du site WordPress pour Expert-subventions — <a href="https://expert-subventions.com" target="_blank" rel="noopener noreferrer" class="project-extlink">expert-subventions.com</a></p>
       <div class="project-tech">
-        <span>Fastify</span><span>AWS Lambda</span><span>DynamoDB</span><span>CloudFront</span>
+        <span>WordPress</span><span>PHP</span><span>Intégration</span>
       </div>
       <div class="project-arrow">↗</div>
     </div>
@@ -674,38 +738,79 @@
   <div class="stack-grid">
 
     <div class="stack-category reveal">
-      <div class="stack-cat-title">// Frontend</div>
+      <div class="stack-cat-title">// Front &amp; langages</div>
       <div class="stack-items">
-        <div class="stack-item"><div class="dot"></div> React / Next.js <div class="stack-bar-wrap"><div class="stack-bar" data-w="95"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> Vue.js / Nuxt <div class="stack-bar-wrap"><div class="stack-bar" data-w="80"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> TypeScript <div class="stack-bar-wrap"><div class="stack-bar" data-w="90"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> Tailwind CSS <div class="stack-bar-wrap"><div class="stack-bar" data-w="92"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> Framer Motion <div class="stack-bar-wrap"><div class="stack-bar" data-w="75"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> HTML 5 <div class="stack-bar-wrap"><div class="stack-bar" data-w="90"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> CSS 3 <div class="stack-bar-wrap"><div class="stack-bar" data-w="88"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> JavaScript <div class="stack-bar-wrap"><div class="stack-bar" data-w="85"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> TypeScript <div class="stack-bar-wrap"><div class="stack-bar" data-w="80"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> Angular <div class="stack-bar-wrap"><div class="stack-bar" data-w="82"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> React <div class="stack-bar-wrap"><div class="stack-bar" data-w="82"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> Bootstrap <div class="stack-bar-wrap"><div class="stack-bar" data-w="78"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> Tailwind <div class="stack-bar-wrap"><div class="stack-bar" data-w="78"></div></div></div>
       </div>
     </div>
 
     <div class="stack-category reveal" style="transition-delay: 0.1s">
-      <div class="stack-cat-title">// Backend</div>
+      <div class="stack-cat-title">// Back &amp; CMS</div>
       <div class="stack-items">
-        <div class="stack-item"><div class="dot"></div> Node.js / Express <div class="stack-bar-wrap"><div class="stack-bar" data-w="93"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> NestJS <div class="stack-bar-wrap"><div class="stack-bar" data-w="82"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> Python / FastAPI <div class="stack-bar-wrap"><div class="stack-bar" data-w="70"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> GraphQL <div class="stack-bar-wrap"><div class="stack-bar" data-w="78"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> REST API Design <div class="stack-bar-wrap"><div class="stack-bar" data-w="95"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> PHP 8 <div class="stack-bar-wrap"><div class="stack-bar" data-w="85"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> Symfony <div class="stack-bar-wrap"><div class="stack-bar" data-w="82"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> WordPress <div class="stack-bar-wrap"><div class="stack-bar" data-w="75"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> Spring Boot (intégration REST) <div class="stack-bar-wrap"><div class="stack-bar" data-w="70"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> API REST <div class="stack-bar-wrap"><div class="stack-bar" data-w="85"></div></div></div>
       </div>
     </div>
 
     <div class="stack-category reveal" style="transition-delay: 0.2s">
-      <div class="stack-cat-title">// Infra & BDD</div>
+      <div class="stack-cat-title">// Données &amp; outils</div>
       <div class="stack-items">
-        <div class="stack-item"><div class="dot"></div> PostgreSQL <div class="stack-bar-wrap"><div class="stack-bar" data-w="88"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> MySQL <div class="stack-bar-wrap"><div class="stack-bar" data-w="82"></div></div></div>
         <div class="stack-item"><div class="dot"></div> MongoDB <div class="stack-bar-wrap"><div class="stack-bar" data-w="82"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> Redis <div class="stack-bar-wrap"><div class="stack-bar" data-w="75"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> Docker / CI/CD <div class="stack-bar-wrap"><div class="stack-bar" data-w="85"></div></div></div>
-        <div class="stack-item"><div class="dot"></div> AWS / Vercel <div class="stack-bar-wrap"><div class="stack-bar" data-w="80"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> Git / GitHub <div class="stack-bar-wrap"><div class="stack-bar" data-w="88"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> GitLab CI <div class="stack-bar-wrap"><div class="stack-bar" data-w="65"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> Figma <div class="stack-bar-wrap"><div class="stack-bar" data-w="72"></div></div></div>
+        <div class="stack-item"><div class="dot"></div> Docker · GitLab CI · Kubernetes <div class="stack-bar-wrap"><div class="stack-bar" data-w="65"></div></div></div>
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section id="parcours">
+  <div class="section-label">Formation &amp; plus</div>
+  <h2 class="section-title reveal">Parcours<br>&amp; langues</h2>
+  <div class="parcours-grid">
+    <div class="parcours-block reveal">
+      <h3>Formations</h3>
+      <ul>
+        <li><strong>École DonkeySchool</strong> — février 2025 à aujourd’hui · Développeur web et web mobile (RNCP niveau bac+2/+3), Paris.</li>
+        <li><strong>2016 — 2018 · Master 2</strong> Études européennes et internationales — Université Sorbonne Nouvelle Paris 3.</li>
+        <li><strong>2015 — 2016 · Master 1</strong> Négociation commerciale internationale (NCI) — Sorbonne Nouvelle Paris 3.</li>
+        <li><strong>2012 — 2015 · Licence LEA</strong> Anglais-Arabe, spécialité commerce international — Sorbonne Nouvelle Paris 3.</li>
+      </ul>
+      <h3 style="margin-top: 28px">Autres expériences</h3>
+      <ul>
+        <li><strong>Auto-entrepreneur</strong> — cours d’arabe (août 2023 — janvier 2025).</li>
+        <li><strong>Comearth Orsay</strong> — service client (octobre 2019 — juillet 2023) : accueil et assistance des clients, gestion des réclamations, suivi des demandes.</li>
+      </ul>
+    </div>
+    <div class="parcours-block reveal" style="transition-delay: 0.08s">
+      <h3>Compétences relationnelles</h3>
+      <div class="parcours-tags">
+        <span>Gestion de projet</span><span>Résolution de problèmes</span><span>Travail en équipe</span><span>Relation client experte</span><span>Communication</span><span>Esprit analytique</span><span>Adaptabilité</span><span>Attention au détail</span><span>Autonomie</span>
+      </div>
+      <h3 style="margin-top: 28px">Langues</h3>
+      <ul>
+        <li>Français et arabe — bilingue</li>
+        <li>Anglais — courant</li>
+      </ul>
+      <h3 style="margin-top: 28px">Centres d’intérêt</h3>
+      <div class="parcours-tags">
+        <span>Cuisine</span><span>Voyage</span><span>Échecs</span><span>Musique</span><span>Lecture</span><span>Bénévolat</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -713,38 +818,39 @@
 <section id="contact">
   <div class="contact-left">
     <div class="section-label">Contact</div>
-    <h2 class="big-cta reveal">On fait<br><span class="ital">quelque</span><br>chose ?</h2>
-    <p style="color: var(--muted); font-size: 12px; line-height: 1.9; max-width: 360px;" class="reveal">Disponible pour des missions freelance en France et à distance. Réponse sous 24h.</p>
+    <h2 class="big-cta reveal">Échangeons<br><span class="ital">sur un</span><br>poste</h2>
+    <p style="color: var(--muted); font-size: 12px; line-height: 1.9; max-width: 360px;" class="reveal">Recherche d’un poste à partir de janvier 2026. Permis B — 75007 Paris.</p>
     <div class="contact-info reveal">
-      <a href="/cdn-cgi/l/email-protection#cca4a9a0a0a38cb8a3a2a2a3a1e2a8a9ba">→ <span class="__cf_email__" data-cfemail="87efe2ebebe8c7f3e8e9e9e8eaa9e3e2f1">[email&#160;protected]</span></a>
-      <a href="https://linkedin.com" target="_blank">→ linkedin.com/in/tonprofil</a>
-      <a href="https://github.com" target="_blank">→ github.com/tonprofil</a>
+      <a href="mailto:mathieu.habib@outlook.fr">→ mathieu.habib@outlook.fr</a>
+      <a href="mailto:mathieu.h@woleet.io">→ mathieu.h@woleet.io</a>
+      <a href="tel:+33628967683">→ +33 6 28 96 76 83</a>
+      <a href="https://www.linkedin.com/in/mathieu-habib" target="_blank" rel="noopener noreferrer">→ LinkedIn — Mathieu HABIB</a>
+      <a href="https://github.com/MathieuHABIB" target="_blank" rel="noopener noreferrer">→ github.com/MathieuHABIB</a>
     </div>
   </div>
 
   <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mzdjnoyr" method="POST">
     <div class="form-field">
-      <label>Ton nom</label>
-      <input type="text" name="name" placeholder="Marie Dupont" required>
+      <label>Votre nom</label>
+      <input type="text" name="name" placeholder="Prénom Nom" required>
     </div>
     <div class="form-field">
       <label>Email</label>
-      <input type="email" name="email" placeholder="marie@startup.io" required>
+      <input type="email" name="email" placeholder="vous@exemple.com" required>
     </div>
     <div class="form-field">
-      <label>Type de projet</label>
+      <label>Sujet</label>
       <select name="projet">
         <option value="">— Sélectionner —</option>
-        <option>Application web</option>
-        <option>API / Backend</option>
-        <option>E-commerce</option>
-        <option>MVP / Prototype</option>
+        <option>Candidature / entretien</option>
+        <option>Projet web</option>
+        <option>Stage / alternance</option>
         <option>Autre</option>
       </select>
     </div>
     <div class="form-field">
-      <label>Ton projet en quelques mots</label>
-      <textarea name="message" placeholder="Je veux construire..."></textarea>
+      <label>Message</label>
+      <textarea name="message" placeholder="Bonjour Mathieu,"></textarea>
     </div>
     <div class="form-msg" id="formMsg"></div>
     <button type="submit" class="form-submit">Envoyer le message</button>
@@ -752,12 +858,12 @@
 </section>
 
 <footer>
-  <span>© 2025 — Dev Fullstack Freelance</span>
+  <span>© 2026 — Mathieu HABIB</span>
   <span>Paris, France</span>
-  <span>Disponible dès maintenant</span>
+  <span>Disponible à partir de juillet 2026</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // CURSOR
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
@@ -802,7 +908,7 @@
     try {
       const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } });
       if (res.ok) {
-        msg.textContent = '// Message envoyé — je reviens vers toi sous 24h.';
+        msg.textContent = '// Message envoyé — merci, je vous réponds dès que possible.';
         this.reset();
         setTimeout(() => { msg.textContent = ''; }, 5000);
       } else {
@@ -812,4 +918,5 @@
   });
 </script>
 </body>
+</html>
 </html>
