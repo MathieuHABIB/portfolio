@@ -298,7 +298,7 @@
     position: relative;
     overflow: hidden;
     transition: border-color 0.3s;
-    cursor: none;
+    cursor: pointer; 
   }
   .project-card::before {
     content: '';
@@ -685,7 +685,7 @@
   <h2 class="section-title reveal">Parcours<br>pro</h2>
   <div class="projects-grid">
 
-    <div class="project-card reveal">
+    <div class="project-card reveal" onclick="window.open('https://woleet.io','_blank')">
       <div class="project-num">01</div>
       <div class="project-tag">Stage · 6 mois · dès janv. 2026</div>
       <div class="project-name">WOLEET</div>
@@ -696,7 +696,7 @@
       <div class="project-arrow">↗</div>
     </div>
 
-    <div class="project-card reveal" style="transition-delay: 0.1s">
+    <div class="project-card reveal" onclick="window.open('https://www.letsligo.com','_blank')" style="transition-delay: 0.1s">
       <div class="project-num">02</div>
       <div class="project-tag">Stage · 2 mois · oct. 2025</div>
       <div class="project-name">DONKEYCORP</div>
@@ -707,7 +707,7 @@
       <div class="project-arrow">↗</div>
     </div>
 
-    <div class="project-card reveal" style="transition-delay: 0.15s">
+    <div class="project-card reveal" onclick="window.open('https://www.andreane.fr','_blank')" style="transition-delay: 0.15s">
       <div class="project-num">03</div>
       <div class="project-tag">Projet final DonkeySchool · 2 mois · jul. 2025</div>
       <div class="project-name">ANDREANE</div>
@@ -717,7 +717,7 @@
       <div class="project-arrow">↗</div>
     </div>
 
-    <div class="project-card reveal" style="transition-delay: 0.2s">
+    <div class="project-card reveal" style="transition-delay: 0.2s" onclick="window.open('https://expert-subventions.com','_blank')">
       <div class="project-num">04</div>
       <div class="project-tag">Site vitrine · mars 2025</div>
       <div class="project-name">EXPERT-SUBVENTIONS</div>
